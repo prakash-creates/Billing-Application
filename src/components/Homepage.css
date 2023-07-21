@@ -1,0 +1,316 @@
+/* For homepage */
+
+.homepage-base, .invoice-base
+{
+    background-color: rgb(32, 32, 32);
+    color: #9c9f9f;
+    width: 100%;
+    margin-left: 2px;
+}
+
+.homepage-base .page-heading, .invoice-base .page-heading
+{
+    color: #9c9f9f;
+    text-transform: capitalize;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    font-weight: 300;
+    border-bottom: 1px solid #fff ;
+}
+
+.homepage-main, .invoice-main
+{
+    display: flex;
+    background-size: cover;
+}
+
+.invoice-main, .invoice-base
+{
+    background-color: rgb(70, 70, 70);
+}
+
+/*For sidebar*/
+
+body {
+    min-height: 100vh;
+    padding: 5px;
+    background-color: rgb(247, 219, 183);
+    background: #fff !important;
+}
+
+:root
+{
+    --primary-color: hsl(196, 78%, 61%);
+    --info-color : hsl(214, 79%, 65%);
+    --success-color : hsl(165, 58%, 55%);
+    --warning-color : hsl(43, 100%, 66%);
+    --danger-color : hsl(354, 81%, 63%);
+    --grey-color: #7f8c8d;
+}
+
+.sidebar-section
+{
+    background: rgb(0, 0, 0);
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: xx-large;
+    line-height: 5em;
+    width: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-hover-fill li 
+{
+    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+
+}
+
+.menu-hover-fill li::before
+{
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: -1rem;
+    width: 0.25rem;
+    height: 40%;
+    background: var(--menu-link-active-color);
+    transition: 0.6s;
+}
+
+.menu-hover-fill li a
+{
+    --menu-link-color: var(--grey-color);
+    z-index: 5;
+    position: relative;
+    background: linear-gradient(var(--menu-link-active-color) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-size 0.45s 0.04s;
+    
+}
+
+.menu-hover-fill li a::before
+{
+    position: absolute;
+    content: attr(data-text);
+    z-index: -1;
+    color: var(--menu-link-color);
+}
+
+.menu-hover-fill li:nth-child(1) {
+    --menu-link-active-color: var(--primary-color);
+}
+
+.menu-hover-fill li:nth-child(2) {
+    --menu-link-active-color: var(--info-color);
+}
+
+.menu-hover-fill li:nth-child(3) {
+    --menu-link-active-color: var(--success-color);
+}
+
+.menu-hover-fill li:nth-child(4) {
+    --menu-link-active-color: var(--warning-color);
+}
+
+.menu-hover-fill li:nth-child(5) {
+    --menu-link-active-color: var(--danger-color);
+}
+
+.menu-hover-fill li:hover::before
+{
+    left: calc(100% - 1rem);
+}
+
+.menu-hover-fill li:hover a
+{
+    background-size: 100%;
+}
+
+/* For form section */
+
+.form-section
+{
+    margin: 60px auto;
+    width: 90%;
+}
+
+form 
+{
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.701);
+    border-radius: 10px;
+    padding: 40px;
+    padding-top: 20px;
+    background: #2e2e2e;
+    text-align: center;
+    color: #c5c8c8;
+    margin-bottom: 40px;
+}
+
+.form-label-text
+{
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.vertical-line-after::after
+{
+    content: "";
+    background-color: #999;
+    position: absolute;
+    width: 0.5px;
+    height: 100%;
+    top: 0%;
+    left: 50%;
+    display: block;
+}
+
+input, textarea
+{
+    padding: 0.8em;
+    background: #6e6d6d;
+    color: azure;
+    font-size: 1.5rem ;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+
+input::placeholder
+{
+    transition: 0.3s ease;
+    color: #fffefe;
+    font-size: 1.2rem;
+}
+
+textarea::placeholder
+{
+    transition: 0.3s ease;
+    color: #fffefe;
+    font-size: 1.2em;
+}
+
+input:active, input:focus, textarea:active, textarea:focus 
+{
+    background: #2f2b2b;
+}
+
+input:active::placeholder, input:focus::placeholder, textarea:active::placeholder, textarea:focus::placeholder  
+{
+    color: #b1aeae;
+}
+
+/* Form section.... ends */
+
+/* Invoice section starts */
+
+.invoice-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #eee;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    min-height: 1100px;
+}
+
+.taxinvoicetop
+{
+    text-align: right !important;
+    text-decoration: underline;
+}
+
+.invoice-box table {
+    width: 100%;
+    line-height: inherit;
+    text-align: left;
+}
+
+.invoice-box table td {
+    padding: 2px;
+    vertical-align: top;
+}
+
+.invoice-box table tr td:nth-child(2) {
+    text-align: left;
+}
+
+.invoice-box table tr td:last-child {
+    text-align: right;
+}
+
+.invoice-box table tr .bank-detail{
+    text-align: left !important;
+    font-weight: 700;
+}
+
+.bank-details{
+    margin-top: 10px !important;
+    border-right: 1px solid #000;
+}
+
+.invoice-box table tr td:nth-child(3) {
+    text-align: left;
+}
+
+.invoice-box table tr.top table td {
+    padding-bottom: 20px;
+}
+
+.invoice-box table tr.top table td.title {
+    font-size: 45px;
+    line-height: 45px;
+    color: #000;
+}
+
+.invoice-box table tr.information table td {
+    padding-bottom: 10px;
+}
+
+.invoice-box table tr.heading td {
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.invoice-box table tr.details td {
+    padding-bottom: 10px;
+}
+
+.invoice-box table tr.item td {
+    border-bottom: 1px solid #eee;
+}
+
+.invoice-box table tr.total td:nth-child(3), .invoice-box table tr.total td:nth-child(4) {
+    border-top: 2px solid #eee;
+    font-weight: bold;
+}
+
+.invoice-box.rtl {
+    direction: rtl;
+    font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+}
+
+.invoice-box.rtl table {
+    text-align: right;
+}
+
+.invoice-box.rtl table tr td:nth-child(2) {
+    text-align: right;
+}
+
+/* Invoice section Ends */
